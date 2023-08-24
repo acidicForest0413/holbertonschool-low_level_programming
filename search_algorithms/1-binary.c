@@ -11,7 +11,7 @@
 int binary_search(int *array, size_t size, int value)
 {
 	size_t i;
-	into res = -1;
+	int res = -1;
 	/*Fail Checks*/
 	if (!array || !size)
 		return (-1);
