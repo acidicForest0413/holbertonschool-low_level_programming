@@ -1,13 +1,13 @@
 #include "search_algos.h"
 
 /**
- * binary_search - Search array using binary search algorithm
- * @array: array to search
- * @size: size of array
- * @value: value to find
- *
- * Return: Index of Value
- */
+* binary_search - Seach array using binary search algro
+* @array: array to search
+* @size: size of array
+* @value: value to find
+*
+* Return: Index of Value
+*/
 int binary_search(int *array, size_t size, int value)
 {
 	size_t i;
@@ -15,12 +15,12 @@ int binary_search(int *array, size_t size, int value)
 	/*Fail Checks*/
 	if (!array || !size)
 		return (-1);
-	printf("searching in array; ");
+	printf("Searching in array: ");
 	print_array(array, size);
 	i = (size - 1) / 2;
 
-	if (value < array[i] && size !=1)
-		res = binary_search(array, i ,value);
+	if (value < array[i] && size != 1)
+		res = binary_search(array, i, value);
 	else if (value > array[i] && size != 1)
 	{
 		i++;
@@ -30,19 +30,19 @@ int binary_search(int *array, size_t size, int value)
 	}
 	else
 		if (value == array[i])
-			{
-				res = (int)i;
-			}
+		{
+			res = (int)i;
+		}
 
 	return (res);
 }
 
 
 /**
- * print_array - Prints Values of an array and a new line
- * @array: Array to print
- * @size: size of array
- */
+* print_array - Prints Values of an array and a new line
+* @array: Array to print
+* @size: size of array
+*/
 void print_array(int *array, size_t size)
 {
 	size_t i = 0;
